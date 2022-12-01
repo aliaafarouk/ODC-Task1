@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style> 
+        input{
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid red;
+        border-radius: 4px;
+        }
+        textarea {
+        width: 50%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid red;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+        }
+        table, th, td {
+          border: 1px solid;
+        }
+        table {
+          width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1">
+        <label for="name">name:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <!-- <label for="name">id:</label><br>
+        <input type="number" id="id" name="id"><br> -->
+
+        <label for="name">phone:</label><br>
+        <input type="number" id="phone" name="phone"><br>
+
+        <label >status:</label><br>
+        <label for="status-1">valid</label>
+        <input type="radio" class="status" id="status-1" value="valid" name="status" checked><br>
+        <label for="status-2">invalid</label>
+        <input type="radio" class="status" id="status-2" value="invalid" name="status"><br>
+        <br>
+        <input type="button" onclick="addUser()" value="Submit">
+
+    </form> 
+    <table id="user-table">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>id</th>
+          <th>phone</th>
+          <th>status</th>
+          <th>actions</th>
+        </tr>
+      </thead>
+
+      <tbody id="user-table-data"></tbody>
+    </table><br>
+    <hr>
+    <div id="edit-form"></div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
